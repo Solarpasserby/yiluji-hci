@@ -63,6 +63,10 @@ details p { margin:.5rem 0 0; color:var(--muted); font-size:.86rem; }
 .status-grid span { color:var(--blue); font-weight:800; }
 .status-grid div { display:grid; }
 .status-grid small { color:var(--muted); }
+.finding-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.8rem; margin-top:.8rem; }
+.finding-grid article { padding:1rem; background:white; border:1px solid var(--line); border-top:3px solid #89b7ea; border-radius:9px; }
+.finding-grid b { color:var(--navy); }
+.finding-grid p { margin:.35rem 0 0; color:var(--muted); font-size:.86rem; }
 .team { display:grid; grid-template-columns:.65fr 1.35fr; gap:2rem; align-items:center; padding:1.8rem max(7vw,1.3rem); background:#e4f0ff; border-top:1px solid #c6dcf5; }
 .team h2 { margin:0; color:var(--navy); font-size:1.7rem; }
 .team ul { display:grid; grid-template-columns:repeat(4,1fr); gap:.6rem; margin:0; padding:0; list-style:none; }
@@ -74,7 +78,7 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1rem max
   .compact-heading .section-no { grid-column:auto; }
   .method-layout { grid-template-columns:1fr; }
   .method-card ul { grid-template-columns:1fr; }
-  .proposal-grid,.status-grid { grid-template-columns:1fr; }
+  .proposal-grid,.status-grid,.finding-grid { grid-template-columns:1fr; }
   .team { grid-template-columns:1fr; }
 }
 @media (max-width:560px) {
