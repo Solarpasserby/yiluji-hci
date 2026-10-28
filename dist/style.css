@@ -57,6 +57,31 @@ details p { margin:.5rem 0 0; color:var(--muted); font-size:.86rem; }
 .ethics p { margin:0; color:var(--muted); font-size:.88rem; }
 .compact-heading { grid-template-columns:.8fr 1.2fr; }
 .compact-heading .section-no { grid-column:auto; }
+.analysis-bars { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+.bar-card { padding:1rem; background:white; border:1px solid var(--line); border-radius:9px; }
+.bar-card>div:first-child { display:flex; justify-content:space-between; gap:1rem; color:var(--navy); }
+.bar-card span { color:var(--blue); font-weight:800; }
+.bar-card p { margin:.25rem 0 .65rem; color:var(--muted); font-size:.84rem; }
+.bar-track { height:7px; overflow:hidden; background:#e4edf7; border-radius:99px; }
+.bar-track i { display:block; width:var(--value); height:100%; background:var(--blue); border-radius:inherit; }
+.result-note { display:grid; grid-template-columns:9rem 1fr; gap:1rem; margin-top:.8rem; padding:.9rem 1rem; background:#edf5ff; border:1px solid #c7dcf3; border-radius:9px; }
+.result-note b { color:var(--blue-dark); }
+.result-note p { margin:0; color:var(--muted); font-size:.88rem; }
+.process-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:.75rem; margin-bottom:.8rem; }
+.process-strip article { position:relative; display:grid; padding:1rem; background:white; border:1px solid #c9dcef; border-radius:9px; }
+.process-strip article:not(:last-child)::after { content:"→"; position:absolute; right:-.62rem; top:50%; z-index:2; transform:translateY(-50%); color:var(--blue); font-weight:800; }
+.process-strip span { color:var(--blue); font-size:1.6rem; font-weight:800; line-height:1; }
+.process-strip b { margin-top:.35rem; color:var(--navy); }
+.process-strip small { color:var(--muted); }
+.theme-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:.7rem; }
+.theme-grid article { padding:1rem; background:white; border:1px solid #c9dcef; border-top:3px solid #7daee5; border-radius:9px; }
+.theme-grid span { display:block; margin-bottom:.25rem; color:var(--blue); font-size:.76rem; font-weight:800; }
+.theme-grid b { color:var(--navy); font-size:.92rem; }
+.theme-grid p { margin:.35rem 0 0; color:var(--muted); font-size:.82rem; }
+.synthesis { display:grid; grid-template-columns:9rem 1fr; margin-top:.8rem; overflow:hidden; background:#dfeeff; border:1px solid #bed7f5; border-radius:9px; }
+.synthesis span { padding:.85rem 1rem; color:var(--blue-dark); border-right:1px solid #bed7f5; font-weight:800; }
+.synthesis p { margin:0; padding:.85rem 1rem; color:var(--navy); }
+.design-title { margin:1.4rem 0 .7rem; color:var(--navy); font-size:1.1rem; }
 .status-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; }
 .status-grid article { display:flex; gap:1rem; align-items:center; padding:1rem; background:white; border:1px solid var(--line); border-radius:9px; }
 .status-grid article.done { background:#f0f7ff; border-color:#bcd6f3; }
@@ -78,7 +103,10 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1rem max
   .compact-heading .section-no { grid-column:auto; }
   .method-layout { grid-template-columns:1fr; }
   .method-card ul { grid-template-columns:1fr; }
-  .proposal-grid,.status-grid,.finding-grid { grid-template-columns:1fr; }
+  .proposal-grid,.status-grid,.finding-grid,.analysis-bars { grid-template-columns:1fr; }
+  .process-strip { grid-template-columns:1fr 1fr; }
+  .process-strip article::after { display:none; }
+  .theme-grid { grid-template-columns:1fr 1fr; }
   .team { grid-template-columns:1fr; }
 }
 @media (max-width:560px) {
@@ -88,8 +116,9 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1rem max
   .hero,.section { padding-left:1.1rem; padding-right:1.1rem; }
   .hero { padding-top:2.7rem; padding-bottom:2.7rem; }
   h1 { font-size:3.2rem; }
-  .research-question,.ethics { grid-template-columns:1fr; }
-  .research-question span { border-right:0; border-bottom:1px solid #bed7f5; }
+  .research-question,.ethics,.result-note,.synthesis { grid-template-columns:1fr; }
+  .research-question span,.synthesis span { border-right:0; border-bottom:1px solid #bed7f5; }
+  .process-strip,.theme-grid { grid-template-columns:1fr; }
   .team ul { grid-template-columns:1fr 1fr; }
   footer { flex-direction:column; }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="医路记：门诊前、中、后的医疗信息连续性研究。">
+  <meta name="description" content="医路记：门诊前、中、后的医疗信息连续性研究与数据分析。">
   <title>医路记｜医疗信息连续性研究</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,7 @@
   <a class="skip" href="#main">跳到主要内容</a>
   <header class="topbar">
     <a class="brand" href="#top"><span class="brand-mark">医</span><span>医路记</span></a>
-    <nav aria-label="页面导航"><a href="#proposal">项目提案</a><a href="#plan">调研计划</a><a href="#results">调研发现</a><a href="#team">成员</a></nav>
+    <nav aria-label="页面导航"><a href="#proposal">项目提案</a><a href="#plan">调研计划</a><a href="#results">问卷结果</a><a href="#analysis">亲和分析</a><a href="#team">成员</a></nav>
   </header>
 
   <main id="main">
@@ -59,12 +59,49 @@
     </section>
 
     <section class="section" id="results">
-      <header class="section-heading compact-heading"><div><p class="section-no">03 · 调研发现</p><h2>连续性问题不只属于老年人</h2></div><p>模拟样本包括5名大学生、2名中年人和4名老年人。年轻用户也会受多平台和零散记录影响，老年用户还要管理更多长期用药和复诊信息。</p></header>
-      <div class="status-grid">
-        <article class="done"><span>4</span><div><b>访谈整理</b><small>覆盖18—79岁</small></div></article>
-        <article class="done"><span>11</span><div><b>问卷样本</b><small>5名大学生 · 2名中年人 · 4名老年人</small></div></article>
-        <article class="done"><span>10/11</span><div><b>信息分散</b><small>需从至少2处查找</small></div></article>
+      <header class="section-heading compact-heading"><div><p class="section-no">03 · 问卷分析</p><h2>连续性问题不只属于老年人</h2></div><p>11份模拟问卷包括5名大学生、2名中年人和4名老年人。这里只描述本次样本，用于发现设计方向，不推断所有患者。</p></header>
+      <div class="analysis-bars" aria-label="问卷主要结果">
+        <article class="bar-card">
+          <div><b>信息分散</b><span>10/11</span></div>
+          <p>需要从至少两个地方寻找一次就诊的信息</p>
+          <div class="bar-track"><i style="--value:90.9%"></i></div>
+        </article>
+        <article class="bar-card">
+          <div><b>缺少旧资料</b><span>9/11</span></div>
+          <p>近半年至少遇到过一次资料不全</p>
+          <div class="bar-track"><i style="--value:81.8%"></i></div>
+        </article>
+        <article class="bar-card">
+          <div><b>医嘱不确定</b><span>9/11</span></div>
+          <p>离院后至少一次仍不太确定医生的交代</p>
+          <div class="bar-track"><i style="--value:81.8%"></i></div>
+        </article>
+        <article class="bar-card">
+          <div><b>集中查看有帮助</b><span>9/11</span></div>
+          <p>认为集中查看信息的帮助较大或非常大</p>
+          <div class="bar-track"><i style="--value:81.8%"></i></div>
+        </article>
       </div>
+      <aside class="result-note"><b>一个重要反例</b><p>手机熟练的大学生仍会遇到资料分散；老年用户中也有人能够稳定自行管理。设计不应只按年龄判断能力，而应提供可以按需开启的支持。</p></aside>
+    </section>
+
+    <section class="section blue-section" id="analysis">
+      <header class="section-heading"><div><p class="section-no">04 · 访谈与亲和图</p><h2>从具体经历整理出五个主题</h2></div><p>我们从4份访谈中提取具体经历，保留来源，再按相似含义归组。最终主题用于解释问题和指导原型，不代表需求出现的统计频率。</p></header>
+      <div class="process-strip" aria-label="亲和分析过程">
+        <article><span>4</span><b>份访谈</b><small>阅读具体经历</small></article>
+        <article><span>40</span><b>张证据卡</b><small>摘录并保留来源</small></article>
+        <article><span>10</span><b>个子主题</b><small>比较与归组</small></article>
+        <article><span>5</span><b>个主主题</b><small>归纳共同问题</small></article>
+      </div>
+      <div class="theme-grid">
+        <article><span>T1</span><b>按就诊串联信息</b><p>资料散落在医院平台、相册和纸张中，用户更习惯按“上次看病”回忆。</p></article>
+        <article><span>T2</span><b>理解医嘱并保留依据</b><p>当场听懂不等于回家能执行，整理结果需要能够返回原件核对。</p></article>
+        <article><span>T3</span><b>区分当前与历史</b><p>旧药、新药和修改过的日期不能混在一起，应突出当前有效安排。</p></article>
+        <article><span>T4</span><b>协作但由本人决定</b><p>家属可以帮助记录和提醒，但分享范围与重要变更应由本人知情。</p></article>
+        <article><span>T5</span><b>简单、可及、可控</b><p>入口稳定、步骤少、字号可调，提醒可以设置，误操作能够撤销。</p></article>
+      </div>
+      <div class="synthesis"><span>总体发现</span><p>让一次就诊的信息<strong>可找、可懂、可执行</strong>，同时保留本人的控制权。</p></div>
+      <h3 class="design-title">分析怎样影响后续设计</h3>
       <div class="finding-grid">
         <article><b>按一次就诊组织</b><p>把症状、报告、医嘱、用药变化和下一步安排保留在同一条时间线上。</p></article>
         <article><b>当前计划优先</b><p>清楚区分正在执行的计划与历史记录，关键内容保留来源、确认和撤销。</p></article>
@@ -74,7 +111,7 @@
     </section>
 
     <section class="team" id="team">
-      <div><p class="section-no">04 · 我们的小组</p><h2>小组成员</h2></div>
+      <div><p class="section-no">05 · 我们的小组</p><h2>小组成员</h2></div>
       <ul><li>张俞睿</li><li>张立群</li><li>高梓瑞</li><li>郑乐</li></ul>
     </section>
   </main>
